@@ -18,6 +18,10 @@ img {
   display: block;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   max-width: 1200px;
   margin: auto;
@@ -149,11 +153,26 @@ img {
   margin: 0 auto 48px;
 }
 
+.subheading {
+  display: block;
+  color: #2563eb;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
 .section-heading h2 {
   color: #0b1b2b;
   margin-bottom: 10px;
   font-size: 2.35rem;
   line-height: 1.15;
+}
+
+.section-heading p {
+  color: #64748b;
+  font-size: 0.98rem;
 }
 
 .speaker-grid {
@@ -199,4 +218,142 @@ img {
 .speaker-details > p:last-child {
   color: #64748b;
   font-size: 0.82rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+
+.price-card {
+  display: flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  flex-direction: column;
+  min-height: 510px;
+  padding: 34px 30px 30px;
+  position: relative;
+}
+
+.price-card-featured {
+  color: #fff;
+  border-color: #0b1b2b;
+  background: #0b1b2b;
+  transform: translateY(-12px);
+  box-shadow: 0 18px 38px #0b1b2b2e;
+}
+
+.plan-name {
+  color: #64748b;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-size: 0.73rem;
+  font-weight: 800;
+}
+
+.price {
+  color: #0b1b2b;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.price span {
+  vertical-align: top;
+  margin-right: 3px;
+  font-size: 1.2rem;
+}
+
+.price-note {
+  color: #64748b;
+  margin-top: 8px;
+  font-size: 0.75rem;
+}
+
+.feature-list {
+  border-top: 1px solid #e5e7eb;
+  margin: 28px 0 30px;
+  padding-top: 25px;
+  list-style: none;
+}
+
+.feature-list li {
+  color: #475569;
+  margin-bottom: 13px;
+  padding-left: 20px;
+  font-size: 0.84rem;
+  position: relative;
+}
+
+.feature-list li:before {
+  color: #2563eb;
+  content: "✓";
+  font-weight: 800;
+  position: absolute;
+  left: 0;
+}
+
+.price-button {
+  display: block;
+  color: #0b1b2b;
+  text-align: center;
+  border: 1px solid #94a3b8;
+  border-radius: 5px;
+  margin-top: auto;
+  padding: 11px 16px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  transition:
+    color 0.2s,
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.price-button:hover,
+.price-button:focus,
+.price-button-primary {
+  color: #fff;
+  border-color: #2563eb;
+  background: #2563eb;
+}
+
+.price-button-primary:hover,
+.price-button-primary:focus {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+}
+
+.popular-label {
+  color: #fff;
+  background: #2563eb;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 0 0 5px 5px;
+  padding: 6px 12px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+  right: 26px;
+}
+
+.price-card-featured .plan-name,
+.price-card-featured .price-note {
+  color: #94a3b8;
+}
+
+.price-card-featured .price {
+  color: #fff;
+}
+
+.price-card-featured .feature-list {
+  border-color: #334155;
+}
+
+.price-card-featured .feature-list li {
+  color: #cbd5e1;
 }
