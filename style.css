@@ -43,6 +43,9 @@ a {
 .site-header {
   background: #fffffff7;
   border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 .navbar {
@@ -109,6 +112,10 @@ a {
   align-items: center;
   font-weight: 800;
   text-decoration: none;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
 }
 
 .button-small {
@@ -121,6 +128,13 @@ a {
 .button-large {
   min-width: 190px;
   padding: 14px 30px;
+}
+
+.button:hover,
+.button:focus {
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 .hero {
@@ -196,6 +210,9 @@ a {
   background: #fff;
   overflow: hidden;
   box-shadow: 0 6px 18px #0b1b2b0d;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
 }
 
 .speaker-card img {
@@ -203,6 +220,11 @@ a {
   object-fit: cover;
   object-position: center center;
   height: 300px;
+}
+
+.speaker-card:hover {
+  box-shadow: 0 14px 34px #0b1b2b14;
+  transform: translateY(-4px);
 }
 
 .speaker-details {
